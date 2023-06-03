@@ -16,7 +16,7 @@ const Client=(props)=>{
             'phone': phone,
             'email': email
         };
-        const response = await fetch("http://127.0.0.1:5000/insertNewClient", {
+        const response = await fetch("https://127.0.0.1:5000/insertNewClient", {
         method: "POST",
         headers: {
         'Content-Type' : 'application/json'
@@ -36,7 +36,7 @@ const Client=(props)=>{
             'phone': phone,
             'email': email
         };
-        var response = await fetch("http://127.0.0.1:5000/getAllClients", {
+        var response = await fetch("https://127.0.0.1:5000/getAllClients", {
         method: "POST",
         headers: {
         'Content-Type' : 'application/json'

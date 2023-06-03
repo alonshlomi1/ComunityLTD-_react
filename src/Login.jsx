@@ -12,7 +12,7 @@ const Login=(props)=>{
             'email': userEmail,
             'password':userPassword
         };
-        var response = await fetch("http://127.0.0.1:5000/login", {
+        var response = await fetch("https://127.0.0.1:5000/login", {
         method: "POST",
         headers: {
         'Content-Type' : 'application/json'
@@ -21,7 +21,6 @@ const Login=(props)=>{
         })
         if (response.ok){
             response = await response.json()
-            console.log(response)
             props.setuser(response)
         }
         else{

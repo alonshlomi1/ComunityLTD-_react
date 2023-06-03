@@ -15,7 +15,7 @@ const ChangePassword=(props)=>{
             'old_password': oldPassword,
             'new_password': newPassword
         };
-        var response = await fetch("http://127.0.0.1:5000/changePassword", {
+        var response = await fetch("https://127.0.0.1:5000/changePassword", {
         method: "POST",
         headers: {
         'Content-Type' : 'application/json'
