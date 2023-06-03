@@ -1,6 +1,5 @@
 import React,{useState, useEffect} from 'react' 
 
-
 const Client=(props)=>{
     const [firstName, setFirstName] = useState("")
     const [lastName, setLastName] = useState("")
@@ -95,9 +94,10 @@ const Client=(props)=>{
                 {tableData.map((client) => (
                 <tr key={client.id}>
                     <td>{client.first_name}</td>
-                    <td>{client.last_name}</td>
+                    <td><div dangerouslySetInnerHTML={{"__html": client.last_name}} /></td>
                     <td>{client.phone}</td>
                     <td>{client.email}</td>
+                    
                 </tr>
                 ))}
             </tbody>
