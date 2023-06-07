@@ -16,6 +16,9 @@ function handle_change_password(e){
   props.setpage("changePassword")
 }
 
+function handle_logout(e){
+  props.setuser(null)
+}
 
     return(
       <nav className='navbar'>
@@ -24,6 +27,7 @@ function handle_change_password(e){
         <button className='navbar_button' onClick={handle_clients}>Clients</button>
         <button className='navbar_button' onClick={handle_new_user}>New User</button>
         <button className='navbar_button' onClick={handle_change_password}>Change Password</button>
+        <button className='logout' onClick={handle_logout}>Logout</button>
       </nav>
     )
   

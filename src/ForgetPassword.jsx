@@ -18,7 +18,9 @@ const ForgetPassword=(props)=> {
             body: JSON.stringify(user)
         })
         if (response.ok){
-            console.log("OK")        
+            console.log("OK")  
+            alert("new password sended to your email")
+            props.setpage("login")
         }else{
             alert("Invalid Email")
         }

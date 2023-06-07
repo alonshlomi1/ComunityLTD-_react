@@ -24,7 +24,12 @@ const Login=(props)=>{
             props.setuser(response)
         }
         else{
-            alert("Some of the Login detailes are invalid")
+            response = await response.json()
+            console.log(response.error)
+            if(response.error === "Unauthorized - blocked")
+                alert("User Blocked, to many login tries")
+            else
+                alert("Some of the Login detailes are invalid")
         }
     }
 

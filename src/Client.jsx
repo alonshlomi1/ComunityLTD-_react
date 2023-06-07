@@ -15,7 +15,7 @@ const Client=(props)=>{
             'phone': phone,
             'email': email
         };
-        const response = await fetch("https://127.0.0.1:5000/insertNewClient", {
+        let response = await fetch("https://127.0.0.1:5000/insertNewClient", {
         method: "POST",
         headers: {
         'Content-Type' : 'application/json'
@@ -23,7 +23,9 @@ const Client=(props)=>{
         body: JSON.stringify(user)
         })
         if (response.ok){
+            response = await response.json()
             console.log("OK")
+            alert("New Client Created")
         }
     }
     async function handle_table(e){

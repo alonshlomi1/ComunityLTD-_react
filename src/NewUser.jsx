@@ -27,8 +27,8 @@ const NewUser=(props)=> {
         body: JSON.stringify(user)
         })
         if (response.ok){
-          props.setpage("home")
-        }
+          alert("New User Created")
+          props.setpage("home")        }
         else{
           alert("Email already exists")
         }

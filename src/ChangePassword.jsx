@@ -24,6 +24,8 @@ const ChangePassword=(props)=>{
         })
         if (response.ok){
             console.log("OK")
+            alert("Password Changed")
+            props.setpage("home")
         }
         else{
             alert("Invalid details")

@@ -49,6 +49,11 @@ button{
   transition: border-color 0.25s;
   margin-top: 5px;
 }
+.logout{
+  position: absolute;
+  right: 5%;
+  top: 4.7%;
+}
 .main_body{
   place-items: center;
   min-width: 100vw;
