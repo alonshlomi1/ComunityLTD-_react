@@ -7,8 +7,6 @@ const ChangePassword=(props)=>{
     async function handle_change(e){
     
         e.preventDefault();
-        console.log(props)
-        console.log(props.user)
 
         const user = {
             'email': props.user.data.email,
